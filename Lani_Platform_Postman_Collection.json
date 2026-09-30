@@ -1,0 +1,213 @@
+{
+  "info": {
+    "_postman_id": "8f3b2c1a-5d6e-4f7a-9c8b-1e2d3f4a5b6c",
+    "name": "Lani Platform - API Gateway (Railway Production)",
+    "description": "Colección completa de pruebas para la infraestructura de microservicios Lani a través del API Gateway en Railway.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{jwt_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://gateway-production-a6b6.up.railway.app",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MzA5M2FlNi00OTBjLTRhYjYtYTJkMC00YjU3ZWRhOWQwMmIiLCJ1bmlxdWVfbmFtZSI6ImFkbWluX3Rlc3RlciIsImp0aSI6IjVmOWJjZjVhLTc1Y2QtNGZhYy05ZDNiLWZiNDA2YzMyZTJjNiIsImZpcmViYXNlX3VpZCI6IjgzMDkzYWU2LTQ5MGMtNGFiNi1hMmQwLTRiNTdlZGE5ZDAyYiIsImRiX3N1ZmZpeCI6Ik5JIiwiYnVzaW5lc3NfZW50aXR5X2lkIjoiMTExMTExMTEtMTExMS0xMTExLTExMTEtMTExMTExMTExMTExIiwidGVuYW50X2lkIjoiMTExMTExMTEtMTExMS0xMTExLTExMTEtMTExMTExMTExMTExIiwicm9sZSI6WyJPd25lciIsIlN5c3RlbSJdLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiT3duZXIiLCJTeXN0ZW0iXSwiaXNzIjoiTGFuaS5JZGVudGl0eSIsImF1ZCI6IkxhbmkuQXBwcyIsImlhdCI6MTc5MDczODY1MCwibmJmIjoxNzkwNzM4NjUwLCJleHAiOjE3OTMzMzA2NTB9.2SCPUzCV5FoI9PK7KUfl3q8RiycH6KqXhHvVianZq4w",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "0. Gateway (Health Check)",
+      "item": [
+        {
+          "name": "Gateway Health Check",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "1. Catalog Service (Lani.Services.Catalog)",
+      "item": [
+        {
+          "name": "Get All Countries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/Countries",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "Countries"]
+            }
+          }
+        },
+        {
+          "name": "Get Country by ISO Code (NI)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/Countries/NI",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "Countries", "NI"]
+            }
+          }
+        },
+        {
+          "name": "Get All Banks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/Banks",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "Banks"]
+            }
+          }
+        },
+        {
+          "name": "Get All Sectors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/Sectors",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "Sectors"]
+            }
+          }
+        },
+        {
+          "name": "Get All Subsectors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/Subsectors",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "Subsectors"]
+            }
+          }
+        },
+        {
+          "name": "Get All Tax Regimes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/TaxRegimes",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "TaxRegimes"]
+            }
+          }
+        },
+        {
+          "name": "Get Units of Measure",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/UnitOfMeasure",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "catalog", "UnitOfMeasure"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Companies Service (Lani.Services.Companies)",
+      "item": [
+        {
+          "name": "Register Business (Create Business)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"countryId\": 4,\n  \"legalName\": \"Empresa Demo Lani S.A.\",\n  \"commercialName\": \"Lani Superstore\",\n  \"taxNumber\": \"J0310000000888\",\n  \"sectorId\": 1,\n  \"subsectorId\": 1,\n  \"branchName\": \"Sucursal Central Managua\",\n  \"address\": \"Rotonda El Güegüense 2c al lago, Managua\",\n  \"phone\": \"+50588889999\",\n  \"email\": \"admin@lanisuperstore.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/companies/businesses",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "companies", "businesses"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Identity Service (Lani.Services.Identity)",
+      "item": [
+        {
+          "name": "User Registration",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser_dev\",\n  \"email\": \"testuser@lani.app\",\n  \"password\": \"LaniPass2026!\",\n  \"countryIso2\": \"NI\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/register",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "auth", "register"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Products Service (Lani.Services.Products)",
+      "item": [
+        {
+          "name": "Get Products by Business",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/products/business/11111111-1111-1111-1111-111111111111",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "products", "business", "11111111-1111-1111-1111-111111111111"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

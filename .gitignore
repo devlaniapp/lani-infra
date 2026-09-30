@@ -1,0 +1,11 @@
+# OS / Temp
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Sensitive Files
+*.env
+*.key
+*.pfx
+firebase-key.json
