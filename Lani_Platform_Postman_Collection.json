@@ -206,6 +206,116 @@
               "path": ["api", "v1", "products", "business", "11111111-1111-1111-1111-111111111111"]
             }
           }
+        },
+        {
+          "name": "Upload Product Image by SKU (Form-Data)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "Archivo de imagen binario (.jpg, .png o .webp de hasta 10 MB)"
+                },
+                {
+                  "key": "productId",
+                  "value": "8c9b4679-5799-4cab-b30a-b484c9384a6f",
+                  "type": "text",
+                  "description": "GUID del producto existente (opcional si se envía internalSku)"
+                },
+                {
+                  "key": "internalSku",
+                  "value": "12354",
+                  "type": "text",
+                  "description": "SKU del producto para nombrar la imagen como {sku}.webp (opcional si se envía productId)"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/products/upload-image-by-sku",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "products", "upload-image-by-sku"]
+            },
+            "description": "Sube y optimiza la imagen a WebP (800x800 máx), nombrándola directamente con su SKU interno (ej: 12354.webp) y generando miniatura {sku}_thumb.webp. Si ya existe, la reemplaza atómicamente y actualiza la URL en la tabla products."
+          }
+        },
+        {
+          "name": "Upload Product Image by SKU (By Product ID)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "Archivo de imagen binario (.jpg, .png o .webp de hasta 10 MB)"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/products/8c9b4679-5799-4cab-b30a-b484c9384a6f/upload-image-by-sku",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "products", "8c9b4679-5799-4cab-b30a-b484c9384a6f", "upload-image-by-sku"]
+            },
+            "description": "Sube la imagen para el producto especificado en la ruta, extrayendo su internal_sku de base de datos para nombrarla {sku}.webp. Reemplaza cualquier imagen existente."
+          }
+        },
+        {
+          "name": "Upload Product Image (Standard / Upload-Image)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "Archivo de imagen binario"
+                },
+                {
+                  "key": "productId",
+                  "value": "8c9b4679-5799-4cab-b30a-b484c9384a6f",
+                  "type": "text",
+                  "description": "GUID opcional del producto"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/products/upload-image",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "products", "upload-image"]
+            },
+            "description": "Sube una imagen de producto generando las variantes main_800x800.webp y main_thumb.webp en el bucket de Railway S3."
+          }
+        },
+        {
+          "name": "Associate Product Image (By ID)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "Archivo de imagen binario"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/products/8c9b4679-5799-4cab-b30a-b484c9384a6f/image",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "products", "8c9b4679-5799-4cab-b30a-b484c9384a6f", "image"]
+            },
+            "description": "Sube y asocia directamente una imagen a un producto existente en la base de datos."
+          }
         }
       ]
     }
