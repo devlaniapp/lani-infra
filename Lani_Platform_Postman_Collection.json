@@ -1,38 +1,24 @@
 {
   "info": {
-    "_postman_id": "8f3b2c1a-5d6e-4f7a-9c8b-1e2d3f4a5b6c",
+    "_postman_id": "13434139-d188-4070-8a70-8d20dae9b03d",
     "name": "Lani Platform - API Gateway (Railway Production)",
     "description": "Colección completa de pruebas para la infraestructura de microservicios Lani a través del API Gateway en Railway.",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-20T03:08:02.000Z",
+    "updatedAt": "2026-11-18T01:28:19.000Z",
+    "lastUpdatedBy": "52357356",
+    "uid": "52357356-13434139-d188-4070-8a70-8d20dae9b03d"
   },
-  "auth": {
-    "type": "bearer",
-    "bearer": [
-      {
-        "key": "token",
-        "value": "{{jwt_token}}",
-        "type": "string"
-      }
-    ]
-  },
-  "variable": [
-    {
-      "key": "base_url",
-      "value": "https://gateway-production-a6b6.up.railway.app",
-      "type": "string"
-    },
-    {
-      "key": "jwt_token",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MzA5M2FlNi00OTBjLTRhYjYtYTJkMC00YjU3ZWRhOWQwMmIiLCJ1bmlxdWVfbmFtZSI6ImFkbWluX3Rlc3RlciIsImp0aSI6IjVmOWJjZjVhLTc1Y2QtNGZhYy05ZDNiLWZiNDA2YzMyZTJjNiIsImZpcmViYXNlX3VpZCI6IjgzMDkzYWU2LTQ5MGMtNGFiNi1hMmQwLTRiNTdlZGE5ZDAyYiIsImRiX3N1ZmZpeCI6Ik5JIiwiYnVzaW5lc3NfZW50aXR5X2lkIjoiMTExMTExMTEtMTExMS0xMTExLTExMTEtMTExMTExMTExMTExIiwidGVuYW50X2lkIjoiMTExMTExMTEtMTExMS0xMTExLTExMTEtMTExMTExMTExMTExIiwicm9sZSI6WyJPd25lciIsIlN5c3RlbSJdLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiT3duZXIiLCJTeXN0ZW0iXSwiaXNzIjoiTGFuaS5JZGVudGl0eSIsImF1ZCI6IkxhbmkuQXBwcyIsImlhdCI6MTc5MDczODY1MCwibmJmIjoxNzkwNzM4NjUwLCJleHAiOjE3OTMzMzA2NTB9.2SCPUzCV5FoI9PK7KUfl3q8RiycH6KqXhHvVianZq4w",
-      "type": "string"
-    }
-  ],
   "item": [
     {
       "name": "0. Gateway (Health Check)",
       "item": [
         {
           "name": "Gateway Health Check",
+          "id": "7c42ad2f-2b9f-4797-ad39-0d25f87dc630",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "auth": {
               "type": "noauth"
@@ -41,107 +27,233 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/health",
-              "host": ["{{base_url}}"],
-              "path": ["health"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-7c42ad2f-2b9f-4797-ad39-0d25f87dc630"
         }
-      ]
+      ],
+      "id": "313e8691-1849-4fb7-894d-55f6aa80e7f9",
+      "createdAt": "2026-10-20T03:08:03.000Z",
+      "updatedAt": "2026-10-20T03:08:03.000Z",
+      "uid": "52357356-313e8691-1849-4fb7-894d-55f6aa80e7f9"
     },
     {
       "name": "1. Catalog Service (Lani.Services.Catalog)",
       "item": [
         {
           "name": "Get All Countries",
+          "id": "d0169158-36ee-4d27-9129-c761d0f01a02",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/Countries",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "Countries"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "Countries"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-d0169158-36ee-4d27-9129-c761d0f01a02"
         },
         {
           "name": "Get Country by ISO Code (NI)",
+          "id": "ff1d3b0c-19ec-41e4-978f-0730130b342d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/Countries/NI",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "Countries", "NI"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "Countries",
+                "NI"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-ff1d3b0c-19ec-41e4-978f-0730130b342d"
         },
         {
           "name": "Get All Banks",
+          "id": "d948765c-6114-4d24-a674-82f184b2696c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/Banks",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "Banks"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "Banks"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-d948765c-6114-4d24-a674-82f184b2696c"
         },
         {
           "name": "Get All Sectors",
+          "id": "f2655813-b488-4a07-9ca0-6dc0aac12c7f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/Sectors",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "Sectors"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "Sectors"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-f2655813-b488-4a07-9ca0-6dc0aac12c7f"
         },
         {
           "name": "Get All Subsectors",
+          "id": "45dc8539-a88e-4890-89f0-5ff90a9d3383",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/Subsectors",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "Subsectors"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "Subsectors"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-45dc8539-a88e-4890-89f0-5ff90a9d3383"
         },
         {
           "name": "Get All Tax Regimes",
+          "id": "004384c9-67d2-4803-93db-ad4138af6d03",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/TaxRegimes",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "TaxRegimes"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "TaxRegimes"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-004384c9-67d2-4803-93db-ad4138af6d03"
         },
         {
           "name": "Get Units of Measure",
+          "id": "2fd1e55a-8a37-4617-9793-1e98b4f663a6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/catalog/UnitOfMeasure",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "catalog", "UnitOfMeasure"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "UnitOfMeasure"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-2fd1e55a-8a37-4617-9793-1e98b4f663a6"
         }
-      ]
+      ],
+      "id": "72608576-ce55-4fc2-a9bd-56cea9e9a941",
+      "createdAt": "2026-10-20T03:08:03.000Z",
+      "updatedAt": "2026-10-20T03:08:03.000Z",
+      "uid": "52357356-72608576-ce55-4fc2-a9bd-56cea9e9a941"
     },
     {
       "name": "2. Companies Service (Lani.Services.Companies)",
       "item": [
         {
           "name": "Register Business (Create Business)",
+          "id": "172ebb9a-b4c2-47cc-9dbd-c85ab40359c1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -156,168 +268,1318 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/companies/businesses",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "companies", "businesses"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "companies",
+                "businesses"
+              ]
             }
-          }
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-172ebb9a-b4c2-47cc-9dbd-c85ab40359c1"
         }
-      ]
+      ],
+      "id": "1470dfa7-bf5d-48e0-951e-73ae29804bc1",
+      "createdAt": "2026-10-20T03:08:03.000Z",
+      "updatedAt": "2026-10-20T03:08:03.000Z",
+      "uid": "52357356-1470dfa7-bf5d-48e0-951e-73ae29804bc1"
     },
     {
       "name": "3. Identity Service (Lani.Services.Identity)",
       "item": [
         {
-          "name": "User Registration",
+          "name": "3.0 Generar Token de Desarrollo / Testing (Auto-JWT en Postman)",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "// Script autónomo para generar JWT canónico de Lani sin dependencias externas",
+                  "const header = {",
+                  "  alg: 'HS256',",
+                  "  typ: 'JWT'",
+                  "};",
+                  "",
+                  "const country = pm.collectionVariables.get('country') || 'NI';",
+                  "const businessEntityId = pm.collectionVariables.get('businessEntityId') || '11111111-1111-1111-1111-111111111111';",
+                  "const now = Math.floor(Date.now() / 1000);",
+                  "",
+                  "const payload = {",
+                  "  sub: '83093ae6-490c-4ab6-a2d0-4b57eda9d02b',",
+                  "  unique_name: 'admin_tester',",
+                  "  jti: 'postman-' + Date.now(),",
+                  "  firebase_uid: '83093ae6-490c-4ab6-a2d0-4b57eda9d02b',",
+                  "  db_suffix: country.toUpperCase(),",
+                  "  business_entity_id: businessEntityId,",
+                  "  tenant_id: businessEntityId,",
+                  "  role: ['Owner', 'System'],",
+                  "  'http://schemas.microsoft.com/ws/2008/06/identity/claims/role': ['Owner', 'System'],",
+                  "  iss: 'Lani.Identity',",
+                  "  aud: 'Lani.Apps',",
+                  "  iat: now,",
+                  "  nbf: now,",
+                  "  exp: now + (30 * 24 * 3600) // Válido por 30 días",
+                  "};",
+                  "",
+                  "function base64url(source) {",
+                  "  let encodedSource = CryptoJS.enc.Base64.stringify(source);",
+                  "  encodedSource = encodedSource.replace(/=+$/, '');",
+                  "  encodedSource = encodedSource.replace(/\\+/g, '-');",
+                  "  encodedSource = encodedSource.replace(/\\//g, '_');",
+                  "  return encodedSource;",
+                  "}",
+                  "",
+                  "const stringifiedHeader = CryptoJS.enc.Utf8.parse(JSON.stringify(header));",
+                  "const encodedHeader = base64url(stringifiedHeader);",
+                  "",
+                  "const stringifiedData = CryptoJS.enc.Utf8.parse(JSON.stringify(payload));",
+                  "const encodedData = base64url(stringifiedData);",
+                  "",
+                  "const secret = 'Lani_Security_Key_2026_Identity_Service_Super_Secret_Key_Nicaragua';",
+                  "let signature = CryptoJS.HmacSHA256(encodedHeader + '.' + encodedData, secret);",
+                  "signature = base64url(signature);",
+                  "",
+                  "const jwt = encodedHeader + '.' + encodedData + '.' + signature;",
+                  "pm.collectionVariables.set('jwt_token', jwt);",
+                  "console.log('✅ Token Lani generado y asignado a {{jwt_token}} para País: ' + country + ' y Empresa: ' + businessEntityId);"
+                ],
+                "type": "text/javascript",
+                "id": "c316be07-e2ee-41f0-817b-e4b57984ec95"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Token generado y guardado en {{jwt_token}}', function () {",
+                  "    var token = pm.collectionVariables.get('jwt_token');",
+                  "    pm.expect(token).to.be.a('string');",
+                  "    pm.expect(token.split('.').length).to.eql(3);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "a3e04250-2955-42d9-9724-8a411dfa6131"
+              }
+            }
+          ],
+          "id": "918839db-a9bc-4ddb-9488-bb721902c74a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/catalog/countries",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "catalog",
+                "countries"
+              ]
+            },
+            "description": "Genera un token JWT canónico de Lani firmado con la clave del sistema utilizando CryptoJS en Postman, configurando automáticamente el claim db_suffix con {{country}} y {{businessEntityId}}, y lo guarda en la variable de colección {{jwt_token}}."
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-918839db-a9bc-4ddb-9488-bb721902c74a"
+        },
+        {
+          "name": "3.1 Generar Token Dev/Testing (Endpoint Backend)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "3faae8ff-b3da-4c7d-bbae-3ffb291e0a4b",
+                "exec": [
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.accessToken) {",
+                  "    pm.collectionVariables.set('jwt_token', jsonData.accessToken);",
+                  "    console.log('✅ Variable {{jwt_token}} actualizada desde endpoint dev-token');",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "id": "4886d057-5c4b-42a7-b65e-b290442967c3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Country",
+                "value": "{{country}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"Lanitest\",\n  \"countryIsoCode\": \"{{country}}\",\n  \"businessEntityId\": \"{{businessEntityId}}\",\n  \"roles\": [\n      \"System\"\n  ],\n  \"userId\": \"83093ae6-490c-4ab6-a2d0-4b57eda9d02b\",\n  \"firebaseUid\": \"9lUsJJwQkTUWZtIUigQNmfKNLc12\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/dev-token",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "dev-token"
+              ]
+            },
+            "description": "Llama al endpoint dev-token en Lani.Services.Identity. Bypassa Firebase y emite un JWT firmado por el TokenService del backend con los claims solicitados."
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-28T02:43:00.000Z",
+          "uid": "52357356-4886d057-5c4b-42a7-b65e-b290442967c3"
+        },
+        {
+          "name": "3.2 Login con Firebase (Flujo Oficial Móvil)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    var jsonData = pm.response.json();",
+                  "    if (jsonData.accessToken) {",
+                  "        pm.collectionVariables.set('jwt_token', jsonData.accessToken);",
+                  "    }",
+                  "    if (jsonData.businessEntityId) {",
+                  "        pm.collectionVariables.set('businessEntityId', jsonData.businessEntityId);",
+                  "    }",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "ca7b02a5-6e63-4d87-9a71-f2500d38dafb"
+              }
+            }
+          ],
+          "id": "a0e3999c-76f0-4092-aef2-74bb910b1f8e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{firebase_id_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Country",
+                "value": "{{country}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firebaseUid\": \"83093ae6-490c-4ab6-a2d0-4b57eda9d02b\",\n  \"countryIsoCode\": \"{{country}}\",\n  \"deviceIdentifier\": \"postman-device-test-01\",\n  \"fcmToken\": \"mock_fcm_token_postman\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/login-firebase",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login-firebase"
+              ]
+            },
+            "description": "Endpoint oficial de inicio de sesión de la app móvil. Valida el token de Firebase contra Google y retorna el AccessToken de Lani."
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-a0e3999c-76f0-4092-aef2-74bb910b1f8e"
+        },
+        {
+          "name": "3.3 Login Biométrico",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    var jsonData = pm.response.json();",
+                  "    if (jsonData.accessToken) {",
+                  "        pm.collectionVariables.set('jwt_token', jsonData.accessToken);",
+                  "    }",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "b3681ac0-7449-4588-beab-26424306a751"
+              }
+            }
+          ],
+          "id": "5e9f3156-aad9-4cb9-b41e-1d55eb9a601c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Country",
+                "value": "{{country}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceIdentifier\": \"postman-device-test-01\",\n  \"biometricKey\": \"sample_biometric_key_signature\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/login-biometric",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login-biometric"
+              ]
+            },
+            "description": "Inicio de sesión rápido por biometría para dispositivos previamente registrados."
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-5e9f3156-aad9-4cb9-b41e-1d55eb9a601c"
+        },
+        {
+          "name": "3.4 Registrar Dispositivo Móvil",
+          "id": "4018cfbe-718b-477c-8a08-d36f999e02bd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "auth": {
-              "type": "noauth"
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt_token}}",
+                  "type": "string"
+                }
+              ]
             },
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "X-Country",
+                "value": "{{country}}"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"testuser_dev\",\n  \"email\": \"testuser@lani.app\",\n  \"password\": \"LaniPass2026!\",\n  \"countryIso2\": \"NI\"\n}"
+              "raw": "{\n  \"deviceIdentifier\": \"postman-device-test-01\",\n  \"deviceModel\": \"Postman Test Environment v1.0\",\n  \"biometricPublicKey\": \"sample_rsa_public_key_postman\"\n}"
             },
             "url": {
-              "raw": "{{base_url}}/api/v1/auth/register",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "auth", "register"]
-            }
-          }
+              "raw": "{{base_url}}/api/v1/devices/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "devices",
+                "register"
+              ]
+            },
+            "description": "Vincula un dispositivo móvil al usuario autenticado para habilitar acceso biométrico."
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-4018cfbe-718b-477c-8a08-d36f999e02bd"
+        },
+        {
+          "name": "3.5 Desvincular Dispositivo Móvil",
+          "id": "ccfc5029-679c-45d8-88d2-a312b1fd50e1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{jwt_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Country",
+                "value": "{{country}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deviceIdentifier\": \"postman-device-test-01\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/devices/unlink",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "devices",
+                "unlink"
+              ]
+            },
+            "description": "Desvincula un dispositivo registrado del usuario actual."
+          },
+          "response": [],
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-ccfc5029-679c-45d8-88d2-a312b1fd50e1"
         }
-      ]
+      ],
+      "id": "0de6fea1-851e-4902-9ef4-843d055ba860",
+      "createdAt": "2026-10-20T03:08:03.000Z",
+      "updatedAt": "2026-10-20T03:08:03.000Z",
+      "uid": "52357356-0de6fea1-851e-4902-9ef4-843d055ba860"
     },
     {
       "name": "4. Products Service (Lani.Services.Products)",
       "item": [
         {
-          "name": "Get Products by Business",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/v1/products/business/11111111-1111-1111-1111-111111111111",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "products", "business", "11111111-1111-1111-1111-111111111111"]
+          "name": "4.1 Almacenamiento e Imágenes (Railway S3 Bucket - Egress $0)",
+          "item": [
+            {
+              "name": "Subir y Asociar Imagen a Producto Existente (Atómico)",
+              "id": "9f8cccf8-c646-4acc-918e-7839f85e4162",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "description": "Archivo de imagen a subir (JPG, PNG o WebP de hasta 10 MB). Genera variante HD 800x800 y miniatura 200x200 para POS, y actualiza la BD.",
+                      "src": "postman-cloud:///1f1cc399-27c7-4c30-8c54-2de40e527aa1"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/{{productId}}/image",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "{{productId}}",
+                    "image"
+                  ]
+                },
+                "description": "Sube una imagen al bucket Railway S3, genera las variantes _800x800.webp y _thumb.webp, y actualiza atómicamente la propiedad ImageUrl del producto en la base de datos."
+              },
+              "response": [
+                {
+                  "id": "5c13bced-ca38-4632-91a7-9dbfdb91d966",
+                  "name": "Subir y Asociar Imagen a Producto Existente (Atómico)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Country",
+                        "value": "{{country}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "file",
+                          "type": "file",
+                          "description": "Archivo de imagen a subir (JPG, PNG o WebP de hasta 10 MB). Genera variante HD 800x800 y miniatura 200x200 para POS, y actualiza la BD.",
+                          "src": "postman-cloud:///1f1cc399-27c7-4c30-8c54-2de40e527aa1"
+                        }
+                      ]
+                    },
+                    "url": {
+                      "raw": "{{base_url}}/api/v1/products/{{productId}}/image",
+                      "host": [
+                        "{{base_url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "products",
+                        "{{productId}}",
+                        "image"
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "_postman_previewlanguage": "Text",
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Wed, 28 Oct 2026 03:12:30 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "railway-hikari"
+                    },
+                    {
+                      "key": "x-railway-request-id",
+                      "value": "iucdQiOLSWOwWHniCx5-qw"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "0"
+                    },
+                    {
+                      "key": "x-hikari-trace",
+                      "value": "mia1.0twb"
+                    },
+                    {
+                      "key": "x-railway-edge",
+                      "value": "mia1"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-10-28T03:12:41.000Z",
+                  "updatedAt": "2026-10-28T03:12:41.000Z",
+                  "uid": "52357356-5c13bced-ca38-4632-91a7-9dbfdb91d966"
+                }
+              ],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-28T03:37:32.000Z",
+              "uid": "52357356-9f8cccf8-c646-4acc-918e-7839f85e4162"
+            },
+            {
+              "name": "Subir Imagen Individual (Pre-creación / Formulario)",
+              "id": "2cd0034d-9459-4ff8-a8a1-0276079a7341",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "description": "Archivo de imagen a subir (JPG, PNG o WebP de hasta 10 MB).",
+                      "src": "/C:/Users/USER/Pictures/lani.PNG"
+                    },
+                    {
+                      "key": "productId",
+                      "value": "{{productId}}",
+                      "type": "text",
+                      "description": "Identificador opcional del producto. Si no se envía, el backend genera uno nuevo."
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/upload-image",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "upload-image"
+                  ]
+                },
+                "description": "Subida individual de imagen con auto-conversión a WebP y redimensión dual. Devuelve imageUrl, thumbnailUrl y productId para usarse en la creación de producto."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-11-05T03:13:47.000Z",
+              "uid": "52357356-2cd0034d-9459-4ff8-a8a1-0276079a7341"
+            },
+            {
+              "name": "Subir Imágenes Masivas en Paralelo (Semaphore 10)",
+              "id": "db52e0b6-9f07-4515-9bd9-092db8a06e05",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "files",
+                      "type": "file",
+                      "description": "Múltiples archivos binarios a subir en paralelo.",
+                      "value": null
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/upload-images-bulk",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "upload-images-bulk"
+                  ]
+                },
+                "description": "Subida concurrente de un lote de imágenes con control de memoria (semáforo de 10). Retorna reporte detallado con las URLs generadas por cada archivo."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-db52e0b6-9f07-4515-9bd9-092db8a06e05"
+            },
+            {
+              "name": "Subir y Asociar Imagen por SKU (Por ID en Ruta / 12354.webp)",
+              "id": "517cc795-a8ba-4367-b2e5-7de1e869a39f",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "description": "Archivo de imagen a subir (JPG, PNG o WebP de hasta 10 MB). Genera variante HD 800x800 ({sku}.webp) y miniatura 200x200 ({sku}_thumb.webp), y actualiza la BD.",
+                      "value": null
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/{{productId}}/upload-image-by-sku",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "{{productId}}",
+                    "upload-image-by-sku"
+                  ]
+                },
+                "description": "Sube la imagen para el producto especificado en la ruta ({{productId}}), obteniendo su SKU interno (internal_sku) de base de datos para nombrarla {sku}.webp (ej: 12354.webp) y miniatura {sku}_thumb.webp. Sobrescribe la imagen si ya existía y actualiza atómicamente la propiedad imageUrl en PostgreSQL."
+              },
+              "response": [],
+              "createdAt": "2026-11-18T01:28:19.000Z",
+              "updatedAt": "2026-11-18T01:28:19.000Z",
+              "uid": "52357356-517cc795-a8ba-4367-b2e5-7de1e869a39f"
+            },
+            {
+              "name": "Subir Imagen por SKU (Form-Data / ProductId o SKU)",
+              "id": "beb9cecf-9083-41d4-803d-186ab9978849",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "type": "file",
+                      "description": "Archivo de imagen a subir (JPG, PNG o WebP de hasta 10 MB).",
+                      "value": null
+                    },
+                    {
+                      "key": "productId",
+                      "value": "{{productId}}",
+                      "type": "text",
+                      "description": "Identificador GUID del producto (opcional si se envía internalSku)"
+                    },
+                    {
+                      "key": "internalSku",
+                      "value": "12354",
+                      "type": "text",
+                      "description": "SKU del producto para nombrar la imagen como {sku}.webp (opcional si se envía productId)"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/upload-image-by-sku",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "upload-image-by-sku"
+                  ]
+                },
+                "description": "Sube la imagen buscando el producto por ProductId o InternalSku, nombrándola {sku}.webp (ej: 12354.webp) y {sku}_thumb.webp en Railway S3. Reemplaza la imagen existente y actualiza la URL pública en el producto."
+              },
+              "response": [],
+              "createdAt": "2026-11-18T01:28:19.000Z",
+              "updatedAt": "2026-11-18T01:28:19.000Z",
+              "uid": "52357356-beb9cecf-9083-41d4-803d-186ab9978849"
             }
-          }
+          ],
+          "id": "126dd51c-3029-4a86-a333-f80b03d68e75",
+          "description": "Endpoints para la subida, procesamiento en memoria a WebP y almacenamiento bajo el árbol jerárquico canónico: {Country}/{TenantId}/{BusinessEntityId}/products/{ProductId}/",
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-126dd51c-3029-4a86-a333-f80b03d68e75"
         },
         {
-          "name": "Upload Product Image by SKU (Form-Data)",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "description": "Archivo de imagen binario (.jpg, .png o .webp de hasta 10 MB)"
+          "name": "4.2 Catálogo y Productos (CRUD)",
+          "item": [
+            {
+              "name": "Crear Producto Manual (con Imagen e Inventario Inicial)",
+              "id": "a12a77ca-3274-47cc-a82b-af7b202afc82",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"businessEntityId\": \"{{businessEntityId}}\",\n  \"categoryId\": 4,\n  \"name\": \"Suculenta Jade Premium\",\n  \"internalSku\": \"PL-002\",\n  \"currentSalePrice\": 120,\n  \"costPrice\": 65,\n  \"baseUnitOfMeasureId\": 1,\n  \"description\": \"Planta prueba1\",\n  \"brandName\": \"Lani Flora\",\n  \"isPromotable\": true,\n  \"isPublishedOnline\": true,\n  \"branchId\": \"{{branchId}}\",\n  \"initialQuantity\": 24,\n  \"batchNumber\": \"LOTE-2026-A\",\n  \"expirationDate\": \"2027-12-31\"\n}"
                 },
-                {
-                  "key": "productId",
-                  "value": "8c9b4679-5799-4cab-b30a-b484c9384a6f",
-                  "type": "text",
-                  "description": "GUID del producto existente (opcional si se envía internalSku)"
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products"
+                  ]
                 },
-                {
-                  "key": "internalSku",
-                  "value": "12354",
-                  "type": "text",
-                  "description": "SKU del producto para nombrar la imagen como {sku}.webp (opcional si se envía productId)"
-                }
-              ]
+                "description": "Crea un producto nuevo en el catálogo, asociando el imageUrl generado en Railway S3 e inicializando su inventario en la sucursal indicada."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-11-05T03:26:49.000Z",
+              "uid": "52357356-a12a77ca-3274-47cc-a82b-af7b202afc82"
             },
-            "url": {
-              "raw": "{{base_url}}/api/v1/products/upload-image-by-sku",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "products", "upload-image-by-sku"]
-            },
-            "description": "Sube y optimiza la imagen a WebP (800x800 máx), nombrándola directamente con su SKU interno (ej: 12354.webp) y generando miniatura {sku}_thumb.webp. Si ya existe, la reemplaza atómicamente y actualiza la URL en la tabla products."
-          }
-        },
-        {
-          "name": "Upload Product Image by SKU (By Product ID)",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "description": "Archivo de imagen binario (.jpg, .png o .webp de hasta 10 MB)"
-                }
-              ]
-            },
-            "url": {
-              "raw": "{{base_url}}/api/v1/products/8c9b4679-5799-4cab-b30a-b484c9384a6f/upload-image-by-sku",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "products", "8c9b4679-5799-4cab-b30a-b484c9384a6f", "upload-image-by-sku"]
-            },
-            "description": "Sube la imagen para el producto especificado en la ruta, extrayendo su internal_sku de base de datos para nombrarla {sku}.webp. Reemplaza cualquier imagen existente."
-          }
-        },
-        {
-          "name": "Upload Product Image (Standard / Upload-Image)",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "description": "Archivo de imagen binario"
+            {
+              "name": "Listar Todos los Productos (Empresa Autenticada con Filtros)",
+              "id": "12075fe4-39c2-4699-8ea3-0c484e5f7629",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products?search=&categoryId=&includeInactive=false",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "",
+                      "description": "Búsqueda por nombre, SKU o código de barra"
+                    },
+                    {
+                      "key": "categoryId",
+                      "value": "",
+                      "description": "Filtro opcional por categoría"
+                    },
+                    {
+                      "key": "includeInactive",
+                      "value": "false",
+                      "description": "Incluir productos desactivados (soft delete)"
+                    }
+                  ]
                 },
-                {
-                  "key": "productId",
-                  "value": "8c9b4679-5799-4cab-b30a-b484c9384a6f",
-                  "type": "text",
-                  "description": "GUID opcional del producto"
-                }
-              ]
+                "description": "Obtiene el catálogo de productos de la empresa autenticada. Retorna tanto imageUrl (HD 800x800) como thumbnailUrl (Miniatura 200x200 para POS)."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-12075fe4-39c2-4699-8ea3-0c484e5f7629"
             },
-            "url": {
-              "raw": "{{base_url}}/api/v1/products/upload-image",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "products", "upload-image"]
+            {
+              "name": "Listar Productos por Business Entity ID",
+              "id": "ae290f3f-733d-4fdc-b01a-66c55b7ce895",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/business/{{businessEntityId}}?search=&categoryId=&includeInactive=false",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "business",
+                    "{{businessEntityId}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": ""
+                    },
+                    {
+                      "key": "categoryId",
+                      "value": ""
+                    },
+                    {
+                      "key": "includeInactive",
+                      "value": "false"
+                    }
+                  ]
+                },
+                "description": "Obtiene todos los productos registrados bajo una empresa específica."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-ae290f3f-733d-4fdc-b01a-66c55b7ce895"
             },
-            "description": "Sube una imagen de producto generando las variantes main_800x800.webp y main_thumb.webp en el bucket de Railway S3."
-          }
+            {
+              "name": "Obtener Detalle de Producto por ID",
+              "id": "8790abaf-9fba-4a9b-97dd-286d399f37d8",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/{{productId}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "{{productId}}"
+                  ]
+                },
+                "description": "Obtiene la ficha técnica completa del producto por su GUID."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-8790abaf-9fba-4a9b-97dd-286d399f37d8"
+            },
+            {
+              "name": "Obtener Detalle de Producto por ID Copy",
+              "id": "f3ac4fd0-ed21-4ba5-9ee9-2416a6915d8e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/{{productId}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "{{productId}}"
+                  ]
+                },
+                "description": "Obtiene la ficha técnica completa del producto por su GUID."
+              },
+              "response": [],
+              "createdAt": "2026-10-22T02:23:10.000Z",
+              "updatedAt": "2026-10-22T02:23:10.000Z",
+              "uid": "52357356-f3ac4fd0-ed21-4ba5-9ee9-2416a6915d8e"
+            },
+            {
+              "name": "Actualizar Precio de Producto",
+              "id": "13c55704-c095-421f-818b-54688c9027eb",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"{{productId}}\",\n  \"newSalePrice\": 135.5,\n  \"modifiedBy\": \"83093ae6-490c-4ab6-a2d0-4b57eda9d02b\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/{{productId}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "{{productId}}"
+                  ]
+                },
+                "description": "Actualiza el precio de venta de un producto existente."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-13c55704-c095-421f-818b-54688c9027eb"
+            },
+            {
+              "name": "Desactivar Producto (Soft Delete Canónico)",
+              "id": "e72b60ea-2e4c-41bf-aa8a-0224b339f266",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/{{productId}}",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "{{productId}}"
+                  ]
+                },
+                "description": "Desactiva lógicamente un producto marcándolo como inactivo en la base de datos."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-e72b60ea-2e4c-41bf-aa8a-0224b339f266"
+            }
+          ],
+          "id": "96d3c822-1d0d-43b0-902b-e66409f2da2b",
+          "description": "Operaciones de consulta, creación, actualización y desactivación de productos en el catálogo multi-tenant.",
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-22T02:23:10.000Z",
+          "uid": "52357356-96d3c822-1d0d-43b0-902b-e66409f2da2b"
         },
         {
-          "name": "Associate Product Image (By ID)",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "file",
-                  "type": "file",
-                  "description": "Archivo de imagen binario"
-                }
-              ]
+          "name": "4.3 Carga e Importación Masiva (Bulk)",
+          "item": [
+            {
+              "name": "Crear Productos en Bloque (JSON Array)",
+              "id": "e91c5f96-7a4f-4262-96b9-fcbf6d9d8830",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"businessEntityId\": \"{{businessEntityId}}\",\n  \"products\": [\n    {\n      \"categoryId\": 1,\n      \"name\": \"Rosal Rojo Intenso\",\n      \"internalSku\": \"PL-002\",\n      \"currentSalePrice\": 280,\n      \"costPrice\": 140,\n      \"baseUnitOfMeasureId\": 1,\n      \"imageUrl\": \"https://lani-media-prod-jmvk-yq6t.t3.storageapi.dev/NI/11111111-1111-1111-1111-111111111111/11111111-1111-1111-1111-111111111111/products/3fa85f64-5717-4562-b3fc-2c963f66afa6/rosal_800x800.webp\"\n    },\n    {\n      \"categoryId\": 2,\n      \"name\": \"Maceta Barro Grande\",\n      \"internalSku\": \"MC-001\",\n      \"currentSalePrice\": 350,\n      \"costPrice\": 180,\n      \"baseUnitOfMeasureId\": 1,\n      \"imageUrl\": \"https://lani-media-prod-jmvk-yq6t.t3.storageapi.dev/NI/11111111-1111-1111-1111-111111111111/11111111-1111-1111-1111-111111111111/products/3fa85f64-5717-4562-b3fc-2c963f66afa6/maceta_800x800.webp\"\n    }\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/bulk",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "bulk"
+                  ]
+                },
+                "description": "Inserta múltiples productos en una única transacción atómica."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-e91c5f96-7a4f-4262-96b9-fcbf6d9d8830"
             },
-            "url": {
-              "raw": "{{base_url}}/api/v1/products/8c9b4679-5799-4cab-b30a-b484c9384a6f/image",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "products", "8c9b4679-5799-4cab-b30a-b484c9384a6f", "image"]
+            {
+              "name": "Crear Productos desde Archivo Base64 (CSV o JSON)",
+              "id": "ca735086-3f3f-4214-a704-1597855cbcd7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"businessEntityId\": \"{{businessEntityId}}\",\n  \"fileName\": \"catalogo_productos.csv\",\n  \"base64Data\": \"Tm9tYnJlLENvZGlnbyxQcmVjaW8sQ2F0ZWdvcmlhClN1Y3VsZW50YSxQTC0wMDEsMTIwLDE=\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/bulk-base64",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "bulk-base64"
+                  ]
+                },
+                "description": "Procesa un archivo codificado en Base64 (CSV o JSON) e importa los productos al catálogo."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-ca735086-3f3f-4214-a704-1597855cbcd7"
             },
-            "description": "Sube y asocia directamente una imagen a un producto existente en la base de datos."
-          }
+            {
+              "name": "Paso 1: Validación Previa Carga Masiva (Dry Run)",
+              "id": "67e05708-236c-488a-b187-c6091cc4bb4e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"businessEntityId\": \"{{businessEntityId}}\",\n  \"fileName\": \"importacion_marzo.csv\",\n  \"base64Data\": \"Tm9tYnJlLENvZGlnbyxQcmVjaW8sQ2F0ZWdvcmlhClN1Y3VsZW50YSxQTC0wMDEsMTIwLDE=\"\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/bulk-import/validate",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "bulk-import",
+                    "validate"
+                  ]
+                },
+                "description": "Analiza el archivo de importación y devuelve reporte detallado de filas válidas y advertencias/errores sin escribir en la base de datos."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-67e05708-236c-488a-b187-c6091cc4bb4e"
+            },
+            {
+              "name": "Paso 2: Confirmación e Inserción Transaccional con Inventario",
+              "id": "a91434db-220a-4773-99dd-5f464cd9397f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "X-Country",
+                    "value": "{{country}}",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"businessEntityId\": \"{{businessEntityId}}\",\n  \"branchId\": \"{{branchId}}\",\n  \"products\": [\n    {\n      \"name\": \"Suculenta Jade\",\n      \"internalSku\": \"PL-001\",\n      \"categoryId\": 1,\n      \"currentSalePrice\": 120,\n      \"costPrice\": 60,\n      \"initialQuantity\": 50,\n      \"imageUrl\": \"https://lani-media-prod-jmvk-yq6t.t3.storageapi.dev/NI/11111111-1111-1111-1111-111111111111/11111111-1111-1111-1111-111111111111/products/3fa85f64-5717-4562-b3fc-2c963f66afa6/jade_800x800.webp\"\n    }\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/products/bulk-import",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "products",
+                    "bulk-import"
+                  ]
+                },
+                "description": "Inserta los productos confirmados del proceso de importación y genera sus existencias iniciales en una única transacción."
+              },
+              "response": [],
+              "createdAt": "2026-10-20T03:08:03.000Z",
+              "updatedAt": "2026-10-20T03:08:03.000Z",
+              "uid": "52357356-a91434db-220a-4773-99dd-5f464cd9397f"
+            }
+          ],
+          "id": "288bf52b-a211-4e6b-802b-613d42d4e875",
+          "description": "Mecanismos para la inserción masiva en bloque directo o mediante flujo guiado de validación previa (Dry Run) y confirmación.",
+          "createdAt": "2026-10-20T03:08:03.000Z",
+          "updatedAt": "2026-10-20T03:08:03.000Z",
+          "uid": "52357356-288bf52b-a211-4e6b-802b-613d42d4e875"
         }
-      ]
+      ],
+      "id": "a85f2216-32f3-4dc7-97a0-ccc7daf87519",
+      "description": "Suite completa de APIs para la gestión del catálogo de productos, optimización y almacenamiento de imágenes en Railway S3 (con variantes duales HD 800x800 y Thumb 200x200 para POS/Commerce) y carga masiva.",
+      "createdAt": "2026-10-20T03:08:03.000Z",
+      "updatedAt": "2026-10-20T03:08:03.000Z",
+      "uid": "52357356-a85f2216-32f3-4dc7-97a0-ccc7daf87519"
+    },
+    {
+      "name": "New Request",
+      "id": "b50ad7b2-cab4-4138-a350-621bd7b8f6ab",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [],
+      "createdAt": "2026-11-18T01:22:15.000Z",
+      "updatedAt": "2026-11-18T01:22:15.000Z",
+      "uid": "52357356-b50ad7b2-cab4-4138-a350-621bd7b8f6ab"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{jwt_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "7ebea6f8-1cb5-44b9-bab5-302f286f5ce5",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "2d03c712-9279-4f73-a30b-a89dd7e01357",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://gateway-production-a6b6.up.railway.app"
+    },
+    {
+      "key": "jwt_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MzA5M2FlNi00OTBjLTRhYjYtYTJkMC00YjU3ZWRhOWQwMmIiLCJ1bmlxdWVfbmFtZSI6ImFkbWluX3Rlc3RlciIsImp0aSI6IjVmOWJjZjVhLTc1Y2QtNGZhYy05ZDNiLWZiNDA2YzMyZTJjNiIsImZpcmViYXNlX3VpZCI6IjgzMDkzYWU2LTQ5MGMtNGFiNi1hMmQwLTRiNTdlZGE5ZDAyYiIsImRiX3N1ZmZpeCI6Ik5JIiwiYnVzaW5lc3NfZW50aXR5X2lkIjoiMTExMTExMTEtMTExMS0xMTExLTExMTEtMTExMTExMTExMTExIiwidGVuYW50X2lkIjoiMTExMTExMTEtMTExMS0xMTExLTExMTEtMTExMTExMTExMTExIiwicm9sZSI6WyJPd25lciIsIlN5c3RlbSJdLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiT3duZXIiLCJTeXN0ZW0iXSwiaXNzIjoiTGFuaS5JZGVudGl0eSIsImF1ZCI6IkxhbmkuQXBwcyIsImlhdCI6MTc5MDczODY1MCwibmJmIjoxNzkwNzM4NjUwLCJleHAiOjE3OTMzMzA2NTB9.2SCPUzCV5FoI9PK7KUfl3q8RiycH6KqXhHvVianZq4w"
+    },
+    {
+      "key": "country",
+      "value": "NI"
+    },
+    {
+      "key": "businessEntityId",
+      "value": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "key": "productId",
+      "value": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "key": "branchId",
+      "value": "b1b2b3b4-5555-6666-7777-888899990000"
+    },
+    {
+      "key": "firebase_id_token",
+      "value": ""
     }
   ]
 }
